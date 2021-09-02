@@ -16,7 +16,7 @@ study = StudyDefinition(
         "incidence": 0.5,
     },
     population=patients.registered_with_one_practice_between(
-        "2019-02-01", end_date
+        "2019-01-01", end_date
     ),
 )
 # Set index date
