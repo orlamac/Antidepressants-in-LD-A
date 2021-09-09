@@ -1,4 +1,16 @@
-from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv, filter_codes_by_category, combine_codelists, Measure  # NOQA
+# This script provides the formal specification of the study data that will be
+# extracted from the Opensafely database
+
+from cohortextractor import (
+    StudyDefinition,
+    patients,
+    codelist,
+    codelist_from_csv,
+    filter_codes_by_category,
+    combine_codelists,
+    Measure
+)
+# NOQA
 
 # Import codelists from codelist.py folder
 from codelists import SSRI_codes, LD_codes, Autism_codes
