@@ -10,10 +10,10 @@ from cohortextractor import (
     combine_codelists,
     Measure
 )
-# NOQA
 
-# Import codelists from codelist.py folder
-from codelists import SSRI_codes, LD_codes, Autism_codes
+
+# Import codelists from codelists.py folder
+from codelists import *
 
 # Define Study time variables
 from datetime import datetime
@@ -48,7 +48,7 @@ SSRI_cohort = patients.with_these_medications(
 
 # Patients with a learning disability
 learning_disability = patients.with_these_clinical_events(
-    LD_codes,
+    learning_disability_codes,
     on_or_before=index_date,
     returning="binary_flag",
     return_expectations={"incidence": 0.5}
@@ -56,7 +56,7 @@ learning_disability = patients.with_these_clinical_events(
 
 # Patients with Autism
 autism = patients.with_these_clinical_events(
-    Autism_codes,
+    autism_codes,
     on_or_before=index_date,
     returning="binary_flag",
     return_expectations={"incidence": 0.5},
