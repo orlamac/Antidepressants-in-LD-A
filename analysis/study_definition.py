@@ -61,3 +61,17 @@ autism = patients.with_these_clinical_events(
     returning="binary_flag",
     return_expectations={"incidence": 0.5},
 )
+
+measures = [
+    Measure(
+        id="ld_SSRI",
+        numerator="SSRI_cohort",
+        denominator="learning_disability",
+        group_by="STP"
+    )
+    Measure(
+        id="autism_SSRI",
+        numerator="SSRI_cohort",
+        denominator="autism",
+        group_by="STP"
+    )
